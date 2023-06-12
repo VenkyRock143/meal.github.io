@@ -12,7 +12,7 @@ body{
     --color5: black;
     --color6: rgb(226, 224, 224);
     --color7: gray;
-    --background: url('/Back.jpg');
+    --background: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80');
 }
 .dark{
     --color1: rgb(0, 0, 0);
@@ -22,7 +22,7 @@ body{
     --color5: white;
     --color6: rgb(37, 37, 37);
     --color7: rgb(27, 27, 27);
-    --background: url('/Back1.jpg');
+    --background: url('https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1088&q=80');
 }
 #nav{
     display: flex;
