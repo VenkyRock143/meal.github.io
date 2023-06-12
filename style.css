@@ -87,7 +87,7 @@ body{
     grid-template-columns: repeat(4,1fr);
     grid-gap: 20px;
     overflow: scroll;
-    height: 83%;
+    height: 79%;
     margin: 1%;
     border-radius: 5px;
   }
