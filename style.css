@@ -345,7 +345,7 @@ body{
     }
     
     .fav-card {
-        width: 60%;
+        width: 70%;
         margin: 5%;
         display: flex;
         text-align: center;
@@ -357,7 +357,7 @@ body{
     #fav-container {
         margin-top: 0;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 20px;
         text-align: center;
         overflow: scroll;
@@ -366,8 +366,8 @@ body{
     }
     
     .fav-card img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         border-radius: 10px;
     }
     
