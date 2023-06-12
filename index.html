@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Meals App</title>
+</head>
+<body>
+    <nav>
+        <div id="nav">
+            <div id="title">
+                <h1>Meals App</h1>
+            </div>  
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle" class="toggle-input">
+            <label for="toggle" class="toggle-label"></label>
+            <span id="mode-name">Light</span>
+        </div>
+        </div>
+      
+    </nav>
+    <div id="container-1" >
+        <div class="search" id="background">
+            <input type="text" id="searchInput" placeholder="Search for a meal...">
+            <div id="searchResults"></div>
+            <div id="mealDetails"></div>   
+        </div>
+        <div id="favourite-container">
+            <h2 id="fav-title">Favourite Meals</h2>
+            <div id="fav-container"></div>
+        </div>
+    </div>
+    
+ 
+    <script src="script.js"></script>
+</body>
+</html>

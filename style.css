@@ -1,0 +1,386 @@
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color1);
+} 
+:root{
+    --color1: white;
+    --color2: rgb(255, 255, 255,0.9); 
+    --color3: rgb(255, 255, 255,0.95); 
+    --color4: rgb(0, 33, 70);
+    --color5: black;
+    --color6: rgb(226, 224, 224);
+    --color7: gray;
+    --background: url(images/Back.jpg)
+}
+.dark{
+    --color1: rgb(0, 0, 0);
+    --color2: rgba(22, 22, 22, 0.9); 
+    --color3: rgba(15, 15, 15, 0.95); 
+    --color4: white;
+    --color5: white;
+    --color6: rgb(37, 37, 37);
+    --color7: rgb(27, 27, 27);
+    --background: url(images/Back1.jpg)
+}
+#nav{
+    display: flex;
+    justify-content: space-around;
+    background:var(--color1);
+    color: var(--color4);
+    height: 60px;
+    align-items: center;
+    background-color: var(--color1);
+}
+#title{
+    padding: 0px 0px 0px 20px;
+    font-size: 20px;
+
+}
+#container-1{
+    display: flex;
+    height: 84vh;
+    /* border: 2px solid black; */
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: top;
+    height: 100%;
+    width: 75%;
+    position: relative;
+    background-color: var(--color1);
+    /* border: 2px solid black; */
+    
+}
+.search:focus{
+    outline: none;
+}
+#searchInput{
+    height: 50px;
+    width: 80%;
+    margin-top: 5%;
+    background-color: var(--color2);
+    border-radius: 25px;
+    border-style: none;
+    font-size: 20px;
+    text-align: center;
+    outline: none;
+    color: var(--color4);
+    
+
+}
+
+#background{
+    background-size: cover;
+    background-image: var(--background)
+}
+
+#searchResults {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
+    overflow: scroll;
+    height: 83%;
+    margin: 1%;
+    border-radius: 5px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin: 15px 10px 0px 10px;
+    background-color:var(--color2);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: ease-out 0.3s;
+  }
+  
+  .card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--color4);
+  }
+  
+  .card button {
+    display: flex;  
+    padding: 8px 16px;
+    background-color: var(--color4);
+    color: var(--color1);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 1%;
+    font-weight: 600;
+  }
+  
+  .card button:hover {
+    background-color: rgb(58, 98, 206);
+    color:white;
+    
+  }
+  .card:hover{
+    transform: scale(1.1);
+    transition: ease-in 0.3s;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+.cardDetails{
+    border: 2px solid var(--color1);
+    position: absolute;
+    top: 14%;
+    left: 1.3%;
+    height: 70vh;
+    overflow: auto;
+    width: 97%;
+    /* border-bottom: 2px solid var(--color4); */
+    color: var(--color4);
+    border-radius: 1%;
+    text-align: center;
+    background-color: var(--color3);
+}
+.cardDetails img{
+    width: 200px;
+}
+
+.cardDetails button{
+    /* position: absolute; */
+    /* right: 0; */
+    color: red;
+    /* margin-left: 24%; */
+    margin-left: 26%;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    background-color: white;
+}
+.cardDetails button:hover{
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
+#favourite-container{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 24%;
+    margin-right:1%;
+    color: var(--color4);
+    background-color: var(--color1);
+    border: 1px solid rgb(255, 255, 255);;
+    box-shadow: 0px 2px 4px var(--color5);
+  
+}
+#fav-title{
+    font-size: 30px;
+    height: 0px;
+    font-style: italic;
+    color: red;
+    text-decoration: underline;
+}
+
+.fav-card{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    margin: 5%;
+    border-radius: 15px;
+    /* align-items: top; */
+    background-color: var(--color6);
+    /* border: 3px solid black; */
+    box-shadow: 0pc 4px 6px var(--color7);
+}
+.fav-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 15px 0px 0px 15px;
+   
+}
+.fav-card button{
+    height: 30px;
+    
+   
+}
+#fav-container{
+    position: relative;
+    border-radius: 0px 0px 0px 25px;
+    overflow: auto;
+    margin-top: 10%;
+
+}
+.card-title{
+    font-size: 15px;
+    margin: auto;
+    margin-bottom: 20%;
+    color: var(--color4);
+}
+.favdetails{
+    /* border: 2px solid black; */
+    position: absolute;
+    margin-top: 22%;
+    margin-left: 40%;
+    color: white;
+    border-style: none;
+    border-radius: 5px;
+    font-weight: 600;
+    background-color: rgb(58, 98, 206);
+    cursor: pointer;
+
+}
+.favdetails:hover{
+    background-color: rgb(0, 33, 70);
+}
+.favremove{
+    /* border: 2px solid black; */
+    position: absolute;
+    margin-top: 22%;
+    margin-left: 70%;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    font-weight: 600;
+    background-color: rgb(255, 5, 5);
+    cursor: pointer;
+}
+
+.favremove:hover{
+    background-color: rgb(121, 0, 0);
+}
+
+/* These are the style properties to switch between dark and light modes with the toggle button */
+
+.toggle-container {
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+    max-height: 100px;
+  }
+  
+  .toggle-input {
+    display: none;
+  }
+  
+  .toggle-label {
+    display: inline-block;
+    position:absolute;
+    margin-top:10%;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--color4);
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-label:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 0.2s ease;
+  }
+  /* These to classes will transform the button when the checkbox is checked */
+  .toggle-input:checked + .toggle-label {
+    background-color: var(--color4);
+  }
+  
+  .toggle-input:checked + .toggle-label:before {
+    transform: translateX(30px);
+    background-color: var(--color1)
+  }
+  /* These properties is used to style the names of modes */
+  #mode-name {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--color4);
+    padding: 5px;
+  }
+
+@media only screen and (max-width: 768px) {
+    .cardDetails{
+    top: 17%;
+    left: 1.3%;
+    }
+    #searchResults {
+        grid-template-columns: repeat(2,1fr);
+      }
+      .card-title{
+        margin-bottom: 25%;
+        font-size: 13px;
+    }
+    .favdetails{
+        position: absolute;
+        top:60%;
+        margin-left: 2%;
+        font-size: 14px;
+    
+    }
+    .favremove{
+        position: relative;
+        margin-left: 0;
+        bottom:7%;
+        font-size: 14px;
+    }
+    .fav-card{
+        position: relative;
+        display: block;
+        height: 250px;
+
+    }
+    .fav-card img{
+        width: 148px;
+        height: 148px;
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    #fav-container{
+        margin-top: 35%;
+
+    }
+}
+@media only screen and (max-height: 768px) {
+    .cardDetails{
+    top: 17%;
+    left: 1.3%;
+    }
+    .card-title{
+        margin-bottom: 25%;
+        font-size: 13px;
+    }
+    .favdetails{
+        margin-top: 25%;
+        margin-left: 47%;
+        font-size: 11px;
+    
+    }
+    .favremove{
+        margin-top: 25%;
+        margin-left: 71%;
+        font-size: 11px;
+    }
+}
