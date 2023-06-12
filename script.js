@@ -2,8 +2,9 @@ const searchInput = document.getElementById('searchInput');
 const searchResults = document.getElementById('searchResults');
 const mealDetails = document.getElementById('mealDetails')
 
+// This function will handle the input which is given by user it will display results if the input length is greater than zero
+// clearResults will clear the results after we rollback
 searchInput.addEventListener('input', handleInput);
-
 function handleInput(){
   const inputValue = searchInput.value.trim();
   if(inputValue.length > 0){
@@ -14,7 +15,7 @@ function handleInput(){
   }
 }
 // fetching results
-
+// This function will fetch results from API using themealdb with the help of json we can fetch the data from API
 function fetchResults(query){
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
   fetch(url)
@@ -28,7 +29,10 @@ function fetchResults(query){
     });
   }
 
-// 
+// This function will display the results which was entered by the user. 
+// It displays a card which contains image,title of meal and two buttons.
+// Details button which will display all details of meals in new page
+// Add to Favourite button will add this mead when clicked to array fav whixh will conatins all the meal cards which are added by user
 function displayResults(meals){
   clearResults()
 
@@ -56,10 +60,11 @@ function displayResults(meals){
 
     searchResults.appendChild(card);
 
+    // When clicked on details it will call fetchMealDetails functions with meal id meal.idMeal
     details.addEventListener('click',() =>{
       fetchMealDetails(meal.idMeal)
     });
-
+    // This will add the meal card to the array fav[] along with details and delete button
     addToFav.addEventListener('click', () =>{
       addToFavourites(meal);
       displayFavourite();
@@ -67,7 +72,7 @@ function displayResults(meals){
   });
 }
 
-
+// This function will fetch all the details of meals using API
 function fetchMealDetails(mealId){
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
   mealDetails.innerHTML = '';
@@ -82,6 +87,7 @@ function fetchMealDetails(mealId){
   });
 }
 
+// This function after fetching details from the API will display them using displayMealDetails
 function displayMealDetails(meal){
   const cardDetails = document.createElement('div')
   cardDetails.classList.add('cardDetails')
@@ -107,6 +113,7 @@ function displayMealDetails(meal){
   instructions.textContent = `instructions: ${meal.strInstructions}`;
   cardDetails.appendChild(instructions)
 
+  // This function will close the displayMealDetails function by clicking on 'X' button
   closeButton.addEventListener('click', ()=>{
     cardDetails.remove();
   })
@@ -116,12 +123,15 @@ function displayMealDetails(meal){
 
 }
 
+// This array will store all the meal cards when they are added
 var fav = [];
 
+// addToFavourites function will push the meal cards when clicked on Add to Favourite button
 function addToFavourites(meal){
   fav.push(meal);
 }
 
+// This function will display all the meal cards in the array along with details and remove buttons
 function displayFavourite(){
   const favContainer = document.getElementById('fav-container');
   favContainer.innerHTML= '';
@@ -153,22 +163,25 @@ function displayFavourite(){
 
 
     favContainer.appendChild(favCard)
-
+     // When clicked on details it will call fetchMealDetails functions with meal id meal.idMeal
     details.addEventListener('click',() =>{
       fetchMealDetails(meal.idMeal)
     });
+
+    // This function will remove (splice) the meal cards from the array when clicked on remove button
      remove.addEventListener('click', ()=>{
       fav.splice(fav.indexOf(meal),1)
       favCard.remove();
      })
   })
-
-
 }
 
+
+// This is the toggle function which will switch between dark and light when clicking on toggle button
 const toggle = document.getElementById('toggle');
 const modeName = document.getElementById('mode-name');
 
+// This will call a class called dark and will change some css properties which are used to change colors when clicking on toggle button
 toggle.addEventListener('change',function(){
   document.body.classList.toggle("dark")
 
@@ -180,7 +193,7 @@ toggle.addEventListener('change',function(){
 });
 
 
-
+// This function will clear all results when we roll back
 function clearResults() {
   searchResults.innerHTML = '';
 }

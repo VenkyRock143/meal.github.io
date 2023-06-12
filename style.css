@@ -14,6 +14,7 @@ body{
     --color7: gray;
     --background: url('https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80');
 }
+/* This class is called when we click on toggle button and change the colors */
 .dark{
     --color1: rgb(0, 0, 0);
     --color2: rgba(22, 22, 22, 0.9); 
@@ -24,6 +25,7 @@ body{
     --color7: rgb(27, 27, 27);
     --background: url('https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1088&q=80');
 }
+/* This are navbar properties */
 #nav{
     display: flex;
     justify-content: space-around;
@@ -38,10 +40,11 @@ body{
     font-size: 20px;
 
 }
+
+/* This id container-1 contains all the properties belongs to search, fetching data and displaying them */
 #container-1{
     display: flex;
     height: 84vh;
-    /* border: 2px solid black; */
 }
 
 .search{
@@ -53,7 +56,6 @@ body{
     width: 75%;
     position: relative;
     background-color: var(--color1);
-    /* border: 2px solid black; */
     
 }
 .search:focus{
@@ -90,6 +92,7 @@ body{
     border-radius: 5px;
   }
   
+  /* This are card properties which are appended from javascript */
   .card {
     display: flex;
     flex-direction: column;
@@ -143,6 +146,7 @@ body{
     display: none;
 }
 
+/* This are cardDetails properties which are used to display the meal details */
 .cardDetails{
     border: 2px solid var(--color1);
     position: absolute;
@@ -151,7 +155,6 @@ body{
     height: 70vh;
     overflow: auto;
     width: 97%;
-    /* border-bottom: 2px solid var(--color4); */
     color: var(--color4);
     border-radius: 1%;
     text-align: center;
@@ -162,10 +165,7 @@ body{
 }
 
 .cardDetails button{
-    /* position: absolute; */
-    /* right: 0; */
     color: red;
-    /* margin-left: 24%; */
     margin-left: 26%;
     border-radius: 5px;
     cursor: pointer;
@@ -177,6 +177,7 @@ body{
     color: white;
 }
 
+/* This are the properties which are used display the favourite items */
 #favourite-container{
     display: flex;
     text-align: center;
@@ -204,9 +205,7 @@ body{
     padding: 5px;
     margin: 5%;
     border-radius: 15px;
-    /* align-items: top; */
     background-color: var(--color6);
-    /* border: 3px solid black; */
     box-shadow: 0pc 4px 6px var(--color7);
 }
 .fav-card img{
@@ -234,7 +233,6 @@ body{
     color: var(--color4);
 }
 .favdetails{
-    /* border: 2px solid black; */
     position: absolute;
     margin-top: 22%;
     margin-left: 40%;
@@ -250,7 +248,6 @@ body{
     background-color: rgb(0, 33, 70);
 }
 .favremove{
-    /* border: 2px solid black; */
     position: absolute;
     margin-top: 22%;
     margin-left: 70%;
@@ -321,6 +318,7 @@ body{
     padding: 5px;
   }
 
+  /* This properties are used to amke the app responsive in small devices */
   @media (max-width: 768px) {
     #container-1 {
         flex-direction: column;
