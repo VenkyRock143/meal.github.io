@@ -327,9 +327,7 @@ body{
     }
     
     .search {
-        width: 100%;
-        height: 70%;
-         
+        width: 100%;     
     }
     
     #searchInput {
@@ -347,7 +345,7 @@ body{
     }
     
     .fav-card {
-        width: 70%;
+        width: 65%;
         margin: 5%;
         display: flex;
         text-align: center;
