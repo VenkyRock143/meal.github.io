@@ -12,7 +12,7 @@ body{
     --color5: black;
     --color6: rgb(226, 224, 224);
     --color7: gray;
-    --background: url(/images/Back.jpg)
+    --background: url(Back.jpg)
 }
 .dark{
     --color1: rgb(0, 0, 0);
@@ -22,7 +22,7 @@ body{
     --color5: white;
     --color6: rgb(37, 37, 37);
     --color7: rgb(27, 27, 27);
-    --background: url(/images/Back1.jpg)
+    --background: url(Back1.jpg)
 }
 #nav{
     display: flex;
