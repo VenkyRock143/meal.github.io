@@ -321,66 +321,77 @@ body{
     padding: 5px;
   }
 
-@media only screen and (max-width: 768px) {
-    .cardDetails{
-    top: 17%;
-    left: 1.3%;
+  @media (max-width: 768px) {
+    #container-1 {
+        flex-direction: column;
     }
-    #searchResults {
-        grid-template-columns: repeat(2,1fr);
-      }
-      .card-title{
-        margin-bottom: 25%;
-        font-size: 13px;
-    }
-    .favdetails{
-        position: absolute;
-        top:60%;
-        margin-left: 2%;
-        font-size: 14px;
     
+    .search {
+        width: 100%;
     }
-    .favremove{
-        position: relative;
+    
+    #searchInput {
+        width: 100%;
+    }
+    
+    #searchResults {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #favourite-container {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    
+    .fav-card {
+        width: 60%;
+        margin: 5%;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    #fav-container {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 20px;
+        text-align: center;
+        overflow: scroll;
+        height: 50vh;
+        margin-top: 4%;
+    }
+    
+    .fav-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+    }
+    
+    .fav-card button {
+        height: 25px;
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+    
+    .favdetails {
         margin-left: 0;
-        bottom:7%;
-        font-size: 14px;
-    }
-    .fav-card{
+        margin-top: 0;
         position: relative;
-        display: block;
-        height: 250px;
-
     }
-    .fav-card img{
-        width: 148px;
-        height: 148px;
-        border-radius: 15px 15px 0px 0px;
-    }
-
-    #fav-container{
-        margin-top: 35%;
-
+    
+    .favremove {
+        margin-left: 0;
+        margin-top: 0;
+        position: relative;
     }
 }
-@media only screen and (max-height: 768px) {
-    .cardDetails{
-    top: 17%;
-    left: 1.3%;
-    }
-    .card-title{
-        margin-bottom: 25%;
-        font-size: 13px;
-    }
-    .favdetails{
-        margin-top: 25%;
-        margin-left: 47%;
-        font-size: 11px;
-    
-    }
-    .favremove{
-        margin-top: 25%;
-        margin-left: 71%;
-        font-size: 11px;
+
+@media (max-width: 480px) {
+    #searchResults {
+        grid-template-columns: 1fr;
     }
 }
