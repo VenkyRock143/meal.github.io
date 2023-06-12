@@ -337,6 +337,9 @@ body{
     #searchResults {
         grid-template-columns: repeat(2, 1fr);
     }
+    .cardDetails button{
+        position: relative;
+    }
     
     #favourite-container {
         width: 100%;
@@ -357,7 +360,7 @@ body{
     #fav-container {
         margin-top: 0;
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(2,1fr);
         grid-gap: 20px;
         text-align: center;
         overflow: scroll;
