@@ -178,7 +178,7 @@ function displayFavourite(){
     // This function will remove (splice) the meal cards from the array when clicked on remove button
     // we also remove it from local storage
      remove.addEventListener('click', ()=>{
-      if(fav >= 0){
+      if(fav !== -1){
         fav.splice(fav.indexOf(meal),1)
         localStorage.setItem('fav',JSON.stringify(fav));
         favCard.remove();
