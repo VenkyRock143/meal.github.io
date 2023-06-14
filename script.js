@@ -126,10 +126,13 @@ function displayMealDetails(meal){
 // This array will store all the meal cards when they are added
 var fav = [];
 
+// By using these code we will store fav array in local storage to make fav array persistent
 if(localStorage.getItem('fav')){
   fav = JSON.parse(localStorage.getItem('fav'))
 }
+
 // addToFavourites function will push the meal cards when clicked on Add to Favourite button
+// we will push card meal to local storage by converting it into string using stringify because it allows only string
 function addToFavourites(meal){
   fav.push(meal);
   localStorage.setItem('fav',JSON.stringify(fav))
@@ -173,10 +176,12 @@ function displayFavourite(){
     });
 
     // This function will remove (splice) the meal cards from the array when clicked on remove button
+    // we also remove it from local storage
      remove.addEventListener('click', ()=>{
-      if(fav !== -1){
+      if(fav >= 0){
         fav.splice(fav.indexOf(meal),1)
-      favCard.remove();
+        localStorage.setItem('fav',JSON.stringify(fav));
+        favCard.remove();
       }
      });
   });
