@@ -126,9 +126,13 @@ function displayMealDetails(meal){
 // This array will store all the meal cards when they are added
 var fav = [];
 
+if(localStorage.getItem('fav')){
+  fav = JSON.parse(localStorage.getItem('fav'))
+}
 // addToFavourites function will push the meal cards when clicked on Add to Favourite button
 function addToFavourites(meal){
   fav.push(meal);
+  localStorage.setItem('fav',JSON.stringify(fav))
 }
 
 // This function will display all the meal cards in the array along with details and remove buttons
@@ -170,10 +174,12 @@ function displayFavourite(){
 
     // This function will remove (splice) the meal cards from the array when clicked on remove button
      remove.addEventListener('click', ()=>{
-      fav.splice(fav.indexOf(meal),1)
+      if(fav !== -1){
+        fav.splice(fav.indexOf(meal),1)
       favCard.remove();
-     })
-  })
+      }
+     });
+  });
 }
 
 
