@@ -299,7 +299,7 @@ body{
     background-color: white;
     transition: transform 0.2s ease;
   }
-  /* These to classes will transform the button when the checkbox is checked */
+  /* These two classes will transform the button when the checkbox is checked */
   .toggle-input:checked + .toggle-label {
     background-color: var(--color4);
   }
@@ -318,7 +318,7 @@ body{
     padding: 5px;
   }
 
-  /* This properties are used to amke the app responsive in small devices */
+  /* This properties are used to make the app responsive in small devices */
   @media (max-width: 768px) {
     #container-1 {
         flex-direction: column;

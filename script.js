@@ -15,7 +15,7 @@ function handleInput(){
   }
 }
 // fetching results
-// This function will fetch results from API using themealdb with the help of json we can fetch the data from API
+// This function will fetch results from API using themealdb with the help of json we can fetch the data from API with json and promises
 function fetchResults(query){
   const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`;
   fetch(url)
@@ -32,7 +32,7 @@ function fetchResults(query){
 // This function will display the results which was entered by the user. 
 // It displays a card which contains image,title of meal and two buttons.
 // Details button which will display all details of meals in new page
-// Add to Favourite button will add this mead when clicked to array fav whixh will conatins all the meal cards which are added by user
+// Add to Favourite button will add this meal when clicked to a array fav which contians all the meal cards which are added by user
 function displayResults(meals){
   clearResults()
 
@@ -72,7 +72,7 @@ function displayResults(meals){
   });
 }
 
-// This function will fetch all the details of meals using API
+// This function will fetch all the details of meals using API with json and promises
 function fetchMealDetails(mealId){
   const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
   mealDetails.innerHTML = '';
