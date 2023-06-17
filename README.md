@@ -1,5 +1,5 @@
 # meal.github.io
-meal
+meal  host link:-https://648d741a94a86661e4b937b2--gilded-capybara-18cfca.netlify.app/
 
 1.This is meal app build using API The Mealdb.
 2.This meal app is made using html,css & javascript.
