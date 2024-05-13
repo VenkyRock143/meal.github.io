@@ -2,6 +2,7 @@
 meal  host link:-https://venky-meal-app.netlify.app/
 
 1.This is meal app build using API The Mealdb.
+
 2.This meal app is made using html,css & javascript.
 3.In search box when we enter any word with respect to entered word the API automatically fetch data
   using json and displays on the browser.
