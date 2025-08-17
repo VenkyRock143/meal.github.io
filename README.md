@@ -10,7 +10,7 @@ The Meal App is a web application that allows users to search for meals, view me
 
 ## Live Demo
 
-Check out the live demo [here](https://venky-meal-app.netlify.app/).
+Check out the live demo [here](https://venkatesh-meal-app.netlify.app/).
 
 ## Features
 
