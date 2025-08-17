@@ -180,90 +180,107 @@ body{
 }
 
 /* This are the properties which are used display the favourite items */
-#favourite-container{
+/* Favourite items container */
+#favourite-container {
     display: flex;
-    text-align: center;
     flex-direction: column;
+    align-items: center;
     width: 24%;
-    margin-right:1%;
+    margin-right: 1%;
+    padding: 10px;
     color: var(--color4);
     background-color: var(--color1);
-    border: 1px solid rgb(255, 255, 255);;
+    border: 1px solid rgb(255, 255, 255);
     box-shadow: 0px 2px 4px var(--color5);
-  
+    border-radius: 12px;
 }
-#fav-title{
-    font-size: 30px;
-    height: 0px;
+
+#fav-title {
+    font-size: 24px;
     font-style: italic;
     color: var(--color8);
     text-decoration: underline;
+    margin-bottom: 15px;
 }
 
-.fav-card{
-    position: relative;
+/* Card */
+.fav-card {
     display: flex;
-    flex-wrap: wrap;
-    padding: 5px;
-    margin: 5%;
+    align-items: center;
+    gap: 10px;
+    padding: 8px;
+    margin: 8px 0;
     border-radius: 15px;
     background-color: var(--color6);
-    box-shadow: 0pc 4px 6px var(--color7);
+    box-shadow: 0px 4px 6px var(--color7);
+    width: 100%;
 }
-.fav-card img{
+
+.fav-card img {
     width: 100px;
     height: 100px;
-    border-radius: 15px 0px 0px 15px;
-   
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
 }
-.fav-card button{
-    height: 30px;
-    
-   
-}
-#fav-container{
-    position: relative;
-    border-radius: 0px 0px 0px 25px;
-    overflow: auto;
-    margin-top: 10%;
 
-}
-.card-title{
-    font-size: 15px;
-    margin: auto;
-    margin-bottom: 20%;
-    color: var(--color4);
-}
-.favdetails{
-    position: absolute;
-    margin-top: 22%;
-    margin-left: 40%;
-    color: white;
-    border-style: none;
-    border-radius: 5px;
+.card-title {
+    font-size: 16px;
     font-weight: 600;
-    background-color: rgb(58, 98, 206);
-    cursor: pointer;
-
+    color: var(--color4);
+    flex: 1;
 }
-.favdetails:hover{
+
+/* Buttons inside card */
+.fav-card button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.favdetails {
+    background-color: rgb(58, 98, 206);
+    color: white;
+}
+.favdetails:hover {
     background-color: rgb(0, 33, 70);
 }
-.favremove{
-    position: absolute;
-    margin-top: 22%;
-    margin-left: 70%;
-    color: white;
-    border-radius: 5px;
-    border-style: none;
-    font-weight: 600;
-    background-color: rgb(255, 5, 5);
-    cursor: pointer;
-}
 
-.favremove:hover{
+.favremove {
+    background-color: rgb(255, 5, 5);
+    color: white;
+}
+.favremove:hover {
     background-color: rgb(121, 0, 0);
 }
+
+/* Scrollable section */
+#fav-container {
+    overflow-y: auto;
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 0 0 0 25px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #favourite-container {
+        width: 90%;
+        margin: auto;
+    }
+    .fav-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .fav-card img {
+        border-radius: 12px;
+        width: 80px;
+        height: 80px;
+    }
+}
+
 
 /* These are the style properties to switch between dark and light modes with the toggle button */
 
